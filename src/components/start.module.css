@@ -1,0 +1,29 @@
+.container{
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 15px;
+    background-image: url('../../public/bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+h2{
+    height: 30px;
+    background-color: rgba(2, 37, 11, 0.397);
+}
+input{
+    border: 1px solid black;
+    color: rgb(0, 0, 0) !important;
+}
+input:focus{
+    background-color: white !important;
+}
+label{
+    background-color: rgba(2, 37, 11, 0.397);;
+}
