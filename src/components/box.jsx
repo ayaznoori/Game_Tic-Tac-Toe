@@ -40,6 +40,7 @@ const Box = () => {
     let diago1=0;
     let diagx2=0;
     let diago2=0;
+    let final=0;
       for(let i=0;i<3;i++){
         let countxv=0;let countxh=0;
         let countov=0;let countoh=0;
@@ -52,7 +53,6 @@ const Box = () => {
           countxh++;
           if(arr[i][j]=="O")
           countoh++;
-
           if(i+j==2 && arr[i][j]=="X")
             diagx1++;
           if(i+j==2 && arr[i][j]=="O")
@@ -61,8 +61,10 @@ const Box = () => {
            diagx2++;
            if(i==j && arr[i][j]=="O")
            diago2++;
+           if(arr[i][j]=="")
+           final++;
         }
-        
+        console.log(final)
         if(countxv==3 || countxh==3 || diagx1==3 || diagx2==3 ){
           alert(`${user1} is Winner`);
           setarr(temp=[["","",""],["","",""],["","",""]]);
@@ -74,7 +76,10 @@ const Box = () => {
           setarr(temp=[["","",""],["","",""],["","",""]]);
           setpoint2((e)=>e+1);
         }
-        
+      }
+      if(final==0){
+        alert(`Match is Draw. Match Reset`);
+        setarr(temp=[["","",""],["","",""],["","",""]]);
       }
   },[inputval])
    
